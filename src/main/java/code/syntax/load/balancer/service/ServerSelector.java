@@ -30,6 +30,7 @@ public class ServerSelector {
         }
 
         if(selectedLoad != null && selectedServer != null){
+            //This method would have to call the server tracking data endpoint to update.
             selectedLoad.incrementLoad();
 
             if(selectedLoad.getCurrentLoad() > selectedLoad.getMaxCapacity()){

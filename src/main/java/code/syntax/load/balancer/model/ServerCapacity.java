@@ -27,6 +27,7 @@ public class ServerCapacity {
     }
 
     public void incrementLoad () {
+        //This method would have to call the server tracking data endpoint to update.
         currentLoad++;
     }
 }
