@@ -1,11 +1,9 @@
 # LoadBalancer
 
-I am aware that kafka and spring cloud LoadBalancer are excellent.
+I am aware that kafka, nginx and spring cloud LoadBalancer are excellent.
 
 This is a challenge to understand how they work at a basic level.
 https://codingchallenges.fyi/challenges/challenge-load-balancer
-
-Currently in a stubbed state.
 
 Articles used:
 https://www.technoidentity.com/insights/load-balancer-in-java-simple-lb/ 
@@ -15,3 +13,4 @@ How are they getting the output? The selector always returns server 1 as it's go
 - Add max load value.
 - Add current req count value.
 - Weighted round Robin.
+- Multithreading added.
