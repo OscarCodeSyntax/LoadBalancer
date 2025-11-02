@@ -1,9 +1,9 @@
 # LoadBalancer
 
-I am aware that kafka, nginx and spring cloud LoadBalancer are excellent.
-
 This is a challenge to understand how they work at a basic level.
 https://codingchallenges.fyi/challenges/challenge-load-balancer
+
+(Kafka, nginx and spring cloud LoadBalancer do it best)
 
 Articles used:
 https://www.technoidentity.com/insights/load-balancer-in-java-simple-lb/ 
