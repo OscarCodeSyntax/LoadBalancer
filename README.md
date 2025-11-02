@@ -3,15 +3,9 @@
 I am aware that kafka and spring cloud LoadBalancer are excellent.
 
 This is a challenge to understand how they work at a basic level.
+https://codingchallenges.fyi/challenges/challenge-load-balancer
 
-
-Info:
-
-Acts like a simple point of contact that manages traffic.
-
-Add and removes services based on loads?
-
-Can re-direct to another healthy server if one fails/ becomes unhealthy.
+Currently in a stubbed state.
 
 Articles used:
 https://www.technoidentity.com/insights/load-balancer-in-java-simple-lb/ 
