@@ -1,6 +1,6 @@
 # LoadBalancer
 
-This is a challenge to understand how they work at a basic level.
+This is a challenge to understand how loadBalancers work at a basic level.
 https://codingchallenges.fyi/challenges/challenge-load-balancer
 
 (Kafka, nginx and spring cloud LoadBalancer do it best)
