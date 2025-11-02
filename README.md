@@ -13,3 +13,4 @@ How are they getting the output? The selector always returns server 1 as it's go
 - Add max load value.
 - Add current req count value.
 - Weighted round Robin.
+- Multithreading added.

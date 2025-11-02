@@ -2,8 +2,8 @@ package code.syntax.load.balancer;
 
 import code.syntax.load.balancer.model.ServerCapacity;
 import code.syntax.load.balancer.service.RequestHandler;
+import code.syntax.load.balancer.service.RequestRunnable;
 import code.syntax.load.balancer.service.ServerCache;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -23,12 +23,20 @@ public class Application {
 
 		RequestHandler requestHandler = new RequestHandler(serverCache);
 
+		//These threads would be created off the back of recieving an api.
+		//For now, we are hard coding them.
+		Thread t1 = new Thread(new RequestRunnable("Req 1", requestHandler));
+		Thread t2 = new Thread(new RequestRunnable("Req 2", requestHandler));
+		Thread t3 = new Thread(new RequestRunnable("Req 3", requestHandler));
+		Thread t4 = new Thread(new RequestRunnable("Req 4", requestHandler));
+
+		t1.start();
+		t2.start();
+		t3.start();
+		t4.start();
+
 		//These are simple representations of the http requests arriving
 		//This would need to be multithreaded as we don't want this queuing.
-		requestHandler.handleRequest("Req 1");
-		requestHandler.handleRequest("Req 2");
-		requestHandler.handleRequest("Req 3");
-		requestHandler.handleRequest("Req 4");
 		requestHandler.handleRequest("Req 5");
 		requestHandler.handleRequest("Req 6");
 		requestHandler.handleRequest("Req 7");

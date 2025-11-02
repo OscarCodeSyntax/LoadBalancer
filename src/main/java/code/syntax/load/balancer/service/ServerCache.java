@@ -4,13 +4,14 @@ import code.syntax.load.balancer.model.ServerCapacity;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ServerCache {
 
-    private final Map<String, ServerCapacity> cache;
+    private final ConcurrentHashMap<String, ServerCapacity> cache;
 
     public ServerCache(){
-        cache = new HashMap<>();
+        cache = new ConcurrentHashMap<>();
     }
 
     public void addServer(String serverName, ServerCapacity load){
@@ -21,7 +22,7 @@ public class ServerCache {
         cache.put(serverName, load);
     }
 
-    public Map<String, ServerCapacity> getCache() {
+    public ConcurrentHashMap<String, ServerCapacity> getCache() {
         return cache;
     }
 }
